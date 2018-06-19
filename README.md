@@ -8,7 +8,7 @@ Unfortunately, there was not any good way to download CodeForces problems in PDF
 
 So I've written this code in Python. However, this my first Python code and I've extracted all CodeForces problems in PDFs, you can find them [here](https://github.com/AliOsm/PDF-CodeForces-Problems) (there are crazy facts about CodeForces in that repository).
 
-Ok, to be honest, training was not the only thing motivated me to do this, I was looking for some small project to try Selenium on it, so this is the key motivation.
+Ok, to be honest, training was not the only thing motivated me to do this, I was looking for some small project to try Selenium on it, so this was the key of motivation.
 
 Have fun with your training.
 
