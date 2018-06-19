@@ -1,12 +1,12 @@
 # codeforces2pdf
 Light tool to extract CodeForces problems into PDF files
 
-## Motivation (Why I've wrote this?)
+## Motivation (why I've written this?)
 I was training in someday and I was tired from sitting in front of the laptop, so I decided to download CodeForces problems in PDF, then print them and solve the problems on my bed!
 
 Unfortunately there was not any good way to download CodeForces problems in PDF, I was looking for a PDF file contains only one problem and only the problem statement, that it is no CodeForces logo, tags and anything else.
 
-So I've wrote this code in Python. however, this my first Python code and I've extracted all CodeForces problems in PDFs, you can find them [here](https://github.com/AliOsm/PDF-CodeForces-Problems) (there is crazy facts about CodeForces in that repository).
+So I've wrote this code in Python. However, this my first Python code and I've extracted all CodeForces problems in PDFs, you can find them [here](https://github.com/AliOsm/PDF-CodeForces-Problems) (there is crazy facts about CodeForces in that repository).
 
 Ok, to be honest, training was not the only thing motivated me to do this, I was looking for some small project to try Selenium on it, so this is the key motivation.
 
