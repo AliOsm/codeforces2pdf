@@ -6,7 +6,7 @@ I was training in someday and I was tired from sitting in front of the laptop, s
 
 Unfortunately, there was not any good way to download CodeForces problems in PDF, I was looking for a PDF file that contains one problem with its statement only, without CodeForces` logo, tags or anything else.
 
-So I've written this code in Python. However, this my first Python code and I've extracted all CodeForces problems in PDFs, you can find them [here](https://github.com/AliOsm/PDF-CodeForces-Problems) (there are crazy facts about CodeForces in that repository).
+So I've written this code in Python. However, this is my first Python code and I've extracted all CodeForces problems in PDFs, you can find them [here](https://github.com/AliOsm/PDF-CodeForces-Problems) (there are crazy facts about CodeForces in that repository).
 
 Ok, to be honest, training was not the only thing motivated me to do this, I was looking for some small project to try Selenium on it, so this was the key of motivation.
 
