@@ -22,9 +22,9 @@ Have fun with your training.
 ## Usage
 After downloading the files in this repository (codeforces2pdf.py - css.css), from terminal you can run them as follows:
 
-- Extract the entire contest problems in one PDF file:
+- Extract the entire contest problems in one PDF file:  
 	`~ python3 codeforces2pdf.py <contest_id>`
 
-- Extract one problem from a contest:
+- Extract one problem from a contest:  
 	`~ python3 codeforces2pdf.py <contest_id> <problem_character>`
 	
