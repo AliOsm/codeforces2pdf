@@ -3,36 +3,61 @@ import sys
 from selenium import webdriver
 from weasyprint import HTML, CSS
 
-def main():
-  if len(sys.argv) != 3:
-    sys.exit('usage: codeforces2pdf.py <contest_id> <problem_character>')
+def exit(message):
+  print(message)
+  sys.exit(1)
 
+def extract_contest(driver, contest_id):
+  # construct contest url
+  contest_url = 'https://codeforces.com/contest/{0}/problems'.format(contest_id)
+
+  # get the target page
+  driver.get(contest_url)
+
+  # extract contest
+  try:
+    return contest_id + '.pdf', driver.execute_script('return document.getElementsByClassName("problem-frames")[0].innerHTML;');
+  except:
+    exit('Invalid arguments values')
+
+def extract_problem(driver, contest_id, problem_character):
   # construct problem url
-  url = 'https://codeforces.com/contest/{0}/problem/{1}'.format(sys.argv[1], sys.argv[2])
+  problem_url = 'https://codeforces.com/contest/{0}/problem/{1}'.format(contest_id, problem_character)
   
-  # construct problem file name
-  filename = sys.argv[1] + sys.argv[2] + '.pdf'
+  # get the target page
+  driver.get(problem_url)
+
+  # extract problem statement
+  try:
+    return contest_id + problem_character + '.pdf', driver.execute_script('return document.getElementsByClassName("problemindexholder")[0].innerHTML;');
+  except:
+    exit('Invalid arguments values')
+
+def main():
+  len_argv = len(sys.argv)
+
+  # check the number of command-line arguments
+  if len_argv < 2 or len_argv > 3:
+    sys.exit('usage: codeforces2pdf.py <contest_id> [problem_character]')
 
   # set driver options
   options = webdriver.ChromeOptions()
   options.add_argument('headless')
-  options.add_argument('window-size=1920x1080')
 
   # initialize driver
   driver = webdriver.Chrome(chrome_options = options)
-  driver.get(url)
 
-  # extract problem statement
-  try:
-    html = driver.execute_script('return document.getElementsByClassName("problemindexholder")[0].innerHTML;');
-  except:
-    print("Invalid arguments.")
-    sys.exit(1)
-  
+  # choose to extract contest or problem
+  if len_argv == 2:
+    file_name, html = extract_contest(driver, sys.argv[1])
+  elif len_argv == 3:
+    file_name, html = extract_problem(driver, sys.argv[1], sys.argv[2])
+
+  # close the driver
   driver.quit()
 
   # build the PDF file
-  HTML(string = html).write_pdf(filename, stylesheets = [CSS('css.css')])
+  HTML(string = html, base_url = 'https://codeforces.com/').write_pdf(file_name, stylesheets = [CSS('css.css')])
 
 if __name__ == "__main__":
   main()
