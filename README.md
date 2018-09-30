@@ -27,4 +27,10 @@ After downloading the files in this repository (codeforces2pdf.py - css.css), fr
 
 - Extract one problem from a contest:  
 	`~ python3 codeforces2pdf.py <contest_id> <problem_character>`
-	
+
+## Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/AliOsm/codeforces2pdf.
+
+## License
+The project is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
