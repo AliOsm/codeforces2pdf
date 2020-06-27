@@ -28,6 +28,9 @@ After downloading the files in this repository (codeforces2pdf.py - css.css), fr
 - Extract one problem from a contest:  
 	`~ python3 codeforces2pdf.py <contest_id> <problem_character>`
 
+- Extract a range of problems from a contest to one PDF file -set the end to Z for open ended range-:  
+	`~ python3 codeforces2pdf.py <contest_id> <start_problem_character> <end_problem_character>`
+
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/AliOsm/codeforces2pdf.
 
