@@ -45,7 +45,7 @@ def main():
   options.add_argument('headless')
 
   # initialize driver
-  driver = webdriver.Chrome(chrome_options = options)
+  driver = webdriver.chrome.webdriver.WebDriver(options=options)
 
   # choose to extract contest or problem
   if len_argv == 2:
